@@ -1,0 +1,16 @@
+name: Myfirstwork flow
+
+on: push
+
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: this is a first pipeline
+          run: "echo this is a first pipeline"
+
+        - name: list te files
+          run: ls
+        - name: read the file
+          run: cat README.md 
