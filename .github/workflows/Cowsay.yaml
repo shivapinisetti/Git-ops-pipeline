@@ -13,8 +13,6 @@ jobs:
           run: ls -ltra
               
         - name: "Execute the shell script"
-          run: ./cowsay.sh
-
-
+          run: ./myshell.sh
 
 
