@@ -15,9 +15,6 @@ jobs:
         - name: "check the file is exists or not"
           run: |
             grep -i "dragon" "dragon.txt"
-            cat dragon.txt
-            ls -ltra
-
 
 
 
