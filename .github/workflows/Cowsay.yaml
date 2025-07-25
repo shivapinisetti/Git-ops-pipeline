@@ -6,16 +6,20 @@ jobs:
     cowsay_job:
         runs-on: ubuntu-latest
         steps:
-        - name: install the cowsay
-          run: sudo apt-get install cowsay -y
 
-        - name: ececute the cowsay commnad
-          run: cowsay -f dragon "run for cover, Iam a dragon" >>dragon.txt
+        - name: list the files
+          run: ls -lart
+              
+        - name: Execute the shell script
+          run: ./Cowsay.sh
 
-        - name: "check the file is exists or not"
-          run: |
-            grep -i "dragon" "dragon.txt"
-            cat dragon.txt
+        # - name: ececute the cowsay commnad
+        #   run: cowsay -f dragon "run for cover, Iam a dragon" >>dragon.txt
+
+        # - name: "check the file is exists or not"
+        #   run: |
+        #     grep -i "dragon" "dragon.txt"
+        #     cat dragon.txt
 
 
 
