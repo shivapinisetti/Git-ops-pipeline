@@ -4,11 +4,11 @@ on: push
 
 jobs:
     cowsay_job:
-        runs-on: unutun:latest
+        runs-on: ubuntu-latest
         steps:
         - name: install the cowsay
           run: sudo apt-get install cowsay -y
-          
+
         - name: ececute the cowsay commnad
           run: cowsay -f dragon "run for cover, Iam a dragon" >>dragon.txt
 
