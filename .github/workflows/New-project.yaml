@@ -1,0 +1,33 @@
+name: this is buid and test and deplo jon
+
+on: push
+
+jobs:
+  build_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: installing the cowsay program
+      run: sudo apt-get install cowsay -y
+
+    - name: executing the cmd
+      run: sudo cowsay -f dragon "run for a cover iam a dragon war"....f..y" >>deagon.txt
+
+    - name: "sleep 15s"
+      run: sleep 15
+
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: sleep 10s
+      run: grep -i "dragon" dragon.txt
+
+
+  deploy_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: cat the file
+      run: cat dragon.txt
+
+    - name: echo "deploying"
+      run: Deployinhg thr application.
+
