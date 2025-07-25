@@ -11,7 +11,7 @@ jobs:
           os: [ubuntu-latest, ubuntu-20.04,  windows-latest]
       runs-on: ubuntu-latest
       steps:
-      - name: echo docker details
+      - name: "echo docker details"
         run: docker info
       - name: run images
         run: docker run hello-world
