@@ -7,6 +7,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+        - name: checkout the code
+          uses: actions/checkout@v4
+          
         - name: this is a first pipeline
           run: "echo this is a first pipeline"
 
