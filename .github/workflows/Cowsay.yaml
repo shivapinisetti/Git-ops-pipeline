@@ -8,10 +8,10 @@ jobs:
         steps:
 
         - name: list the files
-          run: ls -lart
+          run: ls -ltra
               
         - name: Execute the shell script
-          run: ./Cowsay.sh
+          run: ./cowsay.sh
 
         # - name: ececute the cowsay commnad
         #   run: cowsay -f dragon "run for cover, Iam a dragon" >>dragon.txt
