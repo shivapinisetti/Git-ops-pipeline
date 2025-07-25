@@ -10,9 +10,12 @@ jobs:
           uses: actions/checkout@v4
 
         - name: list the files
+          run: ls -larh
+
+        - name: list the files
           run: chmod -x myshell.sh
               
-        - name: "Execute the shell script"
-          run: ./myshell.sh
+        # - name: "Execute the shell script"
+        #   run: ./myshell.sh
 
 
