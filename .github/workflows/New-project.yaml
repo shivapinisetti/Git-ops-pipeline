@@ -43,7 +43,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: my-dargon-file
-        
+
     - name: cat the file
       run: cat dragon.txt
 
@@ -52,5 +52,5 @@ jobs:
       run: grep -i "dragon" dragon.txt
 
     - name: echo "deploying"
-      run: Deployinhg thr application.
+      run: echo "Deployinhg thr application"
 
