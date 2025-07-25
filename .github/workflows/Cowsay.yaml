@@ -12,7 +12,7 @@ jobs:
         - name: ececute the cowsay commnad
           run: cowsay -f dragon "run for cover, Iam a dragon" >>dragon.txt
 
-        - name: check the file is exists or not
+        - name: "check the file is exists or not"
           run: |
             grep -i "dragon" "dragon.txt"
             cat dragon.txt
