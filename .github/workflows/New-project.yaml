@@ -43,7 +43,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: my-dargon-file
-        path: dragon.txt
+        
     - name: cat the file
       run: cat dragon.txt
 
