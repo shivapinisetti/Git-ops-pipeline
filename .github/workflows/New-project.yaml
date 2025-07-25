@@ -32,6 +32,9 @@ jobs:
         name: my-dargon-file
         path: dragon.txt
 
+    - name: chek the file
+      run: ls -lart
+
   deploy_job:
     needs: test_job
     runs-on: ubuntu-latest
