@@ -10,7 +10,7 @@ jobs:
       run: sudo apt-get install cowsay -y
 
     - name: executing the cmd
-      run: cowsay -f dragon "run for a cover iam a dragon war"....f..y" >>deagon.txt
+      run: cowsay -f dragon "run for a cover, iam a dragon war" >>dragon.txt
 
     - name: "sleep 15s"
       run: sleep 15
