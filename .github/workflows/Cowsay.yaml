@@ -7,9 +7,8 @@ jobs:
         runs-on: unutun:latest
         steps:
         - name: install the cowsay
-          run: |
-             sudo apt update
-             sudo apt-get install cowsay -y
+          run: sudo apt-get install cowsay -y
+          
         - name: ececute the cowsay commnad
           run: cowsay -f dragon "run for cover, Iam a dragon" >>dragon.txt
 
