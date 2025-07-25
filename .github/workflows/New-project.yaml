@@ -39,14 +39,15 @@ jobs:
     needs: test_job
     runs-on: ubuntu-latest
     steps:
-    - name: cat the file
-      run: cat dragon.txt
-
     - name: "download the artifacts"
       uses: actions/download-artifact@v4
       with:
         name: my-dargon-file
         path: dragon.txt
+    - name: cat the file
+      run: cat dragon.txt
+
+
     - name: sleep 10s
       run: grep -i "dragon" dragon.txt
 
