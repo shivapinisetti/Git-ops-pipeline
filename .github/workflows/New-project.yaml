@@ -12,13 +12,22 @@ jobs:
     - name: executing the cmd
       run: cowsay -f dragon "run for a cover, iam a dragon war" >>dragon.txt
 
-    - name: "sleep 15s"
-      run: sleep 15
+    - name: "upload the artifacts"
+      uses: actions/upload-artifact@v3
+      with:
+        name: my-dargon-file
+        path: dragon.txt
+
 
   test_job:
     needs: build_job
     runs-on: ubuntu-latest
     steps:
+    - name: "download the artifacts"
+      uses: actions/download-artifact@v3
+      with:
+        name: my-dargon-file
+        path: dragon.txt
     - name: sleep 10s
       run: grep -i "dragon" dragon.txt
 
@@ -29,6 +38,14 @@ jobs:
     steps:
     - name: cat the file
       run: cat dragon.txt
+
+    - name: "download the artifacts"
+      uses: actions/download-artifact@v3
+      with:
+        name: my-dargon-file
+        path: dragon.txt
+    - name: sleep 10s
+      run: grep -i "dragon" dragon.txt
 
     - name: echo "deploying"
       run: Deployinhg thr application.
