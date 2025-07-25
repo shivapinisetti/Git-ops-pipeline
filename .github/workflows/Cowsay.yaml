@@ -10,7 +10,7 @@ jobs:
         - name: list the files
           run: ls -ltra
               
-        - name: Execute the shell script
+        - name: "Execute the shell script"
           run: ./cowsay.sh
 
         # - name: ececute the cowsay commnad
